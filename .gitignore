@@ -1,0 +1,8 @@
+.worktrees/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.agents/
+.agent/
+agent/
