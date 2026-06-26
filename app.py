@@ -496,7 +496,7 @@ try:
         @st.cache_data(ttl=86400)
         def fetch_audit_data(latitude, longitude, start_s, end_s):
             archive_url = f"https://archive-api.open-meteo.com/v1/archive?latitude={latitude}&longitude={longitude}&start_date={start_s}&end_date={end_s}&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max,relative_humidity_2m_max&timezone=Asia%2FSingapore"
-            forecast_url = f"https://historical-forecast-api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&start_date={start_s}&end_date={end_s}&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max,relative_humidity_2m_max&timezone=Asia%2FSingapore"
+            forecast_url = f"https://historical-forecast-api.open-meteo.com/v1/forecast?latitude={latitude}&longitude={longitude}&start_date={start_s}&end_date={end_s}&models=gfs_seamless&daily=temperature_2m_max,precipitation_sum,wind_speed_10m_max,relative_humidity_2m_max&timezone=Asia%2FSingapore"
             
             archive_res = requests.get(archive_url).json()
             forecast_res = requests.get(forecast_url).json()
